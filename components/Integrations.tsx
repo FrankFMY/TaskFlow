@@ -40,7 +40,7 @@ export default function Integrations() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {integrations.map((item, i) => (
             <motion.div
               key={item.name}
@@ -48,7 +48,7 @@ export default function Integrations() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex flex-col items-center gap-3 rounded-xl bg-white border border-gray-200 p-6 hover:shadow-lg hover:border-violet/30 transition-all cursor-default"
+              className="flex flex-col items-center gap-3 rounded-xl bg-white border border-gray-200 p-6 hover:shadow-lg hover:border-violet/30 transition-all cursor-default w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] lg:w-[calc(20%-0.8rem)]"
             >
               <div className="w-12 h-12 rounded-xl bg-violet-muted flex items-center justify-center">
                 <item.icon size={24} className="text-violet" />

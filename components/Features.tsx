@@ -16,7 +16,7 @@ function MiniKanban() {
           {col.heights.map((h, j) => (
             <div
               key={j}
-              className={`${h} rounded-lg bg-white/70 border border-white/50`}
+              className={`${h} rounded-lg bg-white border border-gray-200/50 shadow-sm`}
             />
           ))}
         </div>
@@ -40,7 +40,7 @@ function MiniCalendar() {
                   ? "bg-violet text-white"
                   : isHighlighted
                     ? "bg-amber/20 text-amber"
-                    : "bg-white/70 text-gray-400"
+                    : "bg-white text-gray-400"
               }`}
             >
               {i + 1}
@@ -48,7 +48,7 @@ function MiniCalendar() {
           );
         })}
       </div>
-      <div className="mt-3 flex items-center gap-2 p-2 rounded-lg bg-white/70">
+      <div className="mt-3 flex items-center gap-2 p-2 rounded-lg bg-white">
         <span className="w-2 h-2 rounded-full bg-amber" />
         <span className="text-[10px] text-gray-500">
           Дедлайн: Дизайн-ревью
@@ -139,9 +139,7 @@ export default function Features() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
-                className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-                  reversed ? "lg:direction-rtl" : ""
-                }`}
+                className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
               >
                 <div className={reversed ? "lg:order-2" : ""}>
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-violet-muted mb-5">

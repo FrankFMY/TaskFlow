@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="hidden sm:block scale-[0.65] sm:scale-75 lg:scale-100 origin-top-left lg:origin-center"
+          className="hidden sm:block lg:scale-100 origin-top lg:origin-center"
         >
           <KanbanMockup />
         </motion.div>
