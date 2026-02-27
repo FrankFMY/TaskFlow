@@ -62,14 +62,16 @@ function MiniChart() {
   const bars = [65, 80, 45, 90, 70, 55, 85];
   return (
     <div className="p-4">
-      <div className="flex items-end gap-2 h-28">
+      <div className="flex gap-2 h-28">
         {bars.map((h, i) => (
           <div key={i} className="flex-1 flex flex-col items-center gap-1">
-            <div
-              className="w-full rounded-t-md bg-violet/70"
-              style={{ height: `${h}%` }}
-            />
-            <span className="text-[8px] text-gray-400">
+            <div className="flex-1 relative w-full">
+              <div
+                className="absolute bottom-0 left-0 right-0 rounded-t-md bg-violet/70"
+                style={{ height: `${h}%` }}
+              />
+            </div>
+            <span className="text-[8px] text-gray-400 shrink-0">
               {["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"][i]}
             </span>
           </div>
